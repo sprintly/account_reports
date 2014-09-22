@@ -175,7 +175,7 @@ class TablePrinter(object):
 
 class ReportGenerator(object):
     def __init__(self, period1, period2, period3, list_paid=False,
-                 plan_breakdown=False, key=None, secret=None):
+                 plan_breakdown=False, key=None, secret=None, header_format=None):
         if key is None:
             raise AttributeError("Must provide AWS key")
 
@@ -193,7 +193,8 @@ class ReportGenerator(object):
         latest_month = TwoPeriodReport(old, new)
         previous_month = TwoPeriodReport(prv, old)
 
-        table = TablePrinter(previous_month, latest_month)
+        table = TablePrinter(previous_month, latest_month,
+                             header_format=header_format or '%b %Y')
         print table
         print "* Need to validate."
 
