@@ -1,5 +1,7 @@
 # Account Reports
 
+![](https://magnum.travis-ci.com/sprintly/account_reports.svg?token=z1Gk7JJrpVngapauqquH)
+
 A library used for running reports on account activity for sprintly.
 
 # Installation
