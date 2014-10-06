@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='account_reports',
+    name='account-reports',
     version='0.2.0',
     packages=find_packages(),
     url='https://github.com/sprintly/account_reports',
